@@ -1,0 +1,517 @@
+﻿/*
+
+    min-width: rem
+    max-width: rem
+    width: %
+    border: px
+    other: rem
+
+*/
+
+
+
+
+
+#invoiceNumberFeedback {
+    position: absolute;
+    z-index: 10; /* Places it visually above other elements */
+    top: -1.5rem;
+
+    /* Optional: Explicitly anchor it to its natural spot if needed */
+    left: 0;
+}
+
+
+#DivEditInvoice table {
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+
+#DivEditInvoice table caption {
+    text-align: left;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+
+
+#DivEditInvoice table th, 
+#DivEditInvoice table td {
+    border: 1px solid;
+}
+
+
+
+    #DivEditInvoice input[type="date"]{
+
+        font-family: sans-serif;
+    }
+    
+
+
+
+#DivEditInvoice th {
+    text-align: left;
+    font-weight: normal;
+    font-family: serif;
+}
+
+
+/*Den här är sepcifikt för Safari för att centrera textrutan inuti cellen då den är kortare än i andra webbläsare*/
+td.delivery-date-cell{
+    text-align:center;
+}
+
+
+/* Screen-reader-only utility to hide elements safely */
+.screen-reader-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* For older browsers */
+    clip-path: inset(50%); /* Modern standard */
+    white-space: nowrap;
+    border: 0;
+}
+
+#DivEditInvoice table > caption {
+    font-size: 0.9rem;
+}
+
+main {
+    margin-bottom: 2.25rem;
+}
+
+
+/*LOGOTYP*/
+/***********************/
+
+
+/*Länken som är runt loggan*/
+#LogoLink {
+    max-width: 32rem;
+    display: block;
+    margin: 2rem auto;
+}
+
+
+#LogoImage {
+    width: 100%;
+}
+
+
+/**************************/
+
+
+
+/*Rubriker*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+    margin: .15rem 0;
+}
+
+
+
+/*Alla knappar*/
+input[type=submit],
+input[type=button],
+button {
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: rgb(240, 240, 240);
+    border-color: rgb(0, 0, 0);
+}
+
+
+    /*Alla disablade knappar*/
+    input[type=submit]:disabled,
+    input[type=button]:disabled
+    button:disabled {
+        color: rgb(84 84 84 / 87%);
+    }
+
+
+.disabled-label-font-color {
+    color: rgb(100, 100, 100);
+}
+
+
+
+.display-none {
+    display: none;
+}
+
+
+
+
+
+
+
+/*Överordnade sidelement*/
+/*********************************/
+#CssContainer {
+    max-width: 68.75rem;
+    margin: 2rem auto;
+}
+
+    #CssContainer::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+
+
+#DivInvoiceRecipient,
+#DivDatabase {
+    display: inline-block;
+    margin: .5rem 1.375rem;
+    vertical-align: top;
+}
+
+#DivInvoiceRecipient {
+    margin-block-start: 2.2rem;
+    position: relative;
+}
+
+#DivDatabase {
+    float: right;
+}
+
+
+
+
+
+#DivArticleList {
+    width: fit-content;
+    margin: 2rem auto 1.7rem;
+}
+
+
+
+
+
+
+/*MOTTAGARUPPGIFTER*/
+/*********************/
+
+
+#DivInvoiceRecipient [id^="Lbl"] {
+    min-width: 11.25rem;
+    max-width: 11.25rem;
+    display: inline-block;
+}
+
+
+
+#DivInvoiceRecipient input {
+    margin: .15rem;
+}
+
+/* Style textboxes that have the literal HTML [readonly] attribute */
+input[readonly] {
+    background-color: #f3f4f6; /* Soft gray indicator background */
+    color: #4b5563; /* Darker gray text to maintain 4.9:1 contrast */
+    border-color: #9ca3af; /* Borders remain distinct */
+    cursor: default;
+}
+
+
+
+
+
+
+input[type="checkbox"],
+#DivInvoiceRecipient > span:nth-child(8) > label,
+#DivInvoiceRecipient > label {
+    vertical-align: middle;
+    position: relative;
+    top: -1px; /* Micro-adjustment if the font family is uneven */
+}
+
+
+
+
+.auto-filled-background-color {
+    background-color: rgba(235, 235, 235, 0.9);
+}
+
+#ChbDeliveryAddress {
+    vertical-align: middle;
+}
+
+#DivDeliveryAddress {
+    margin-left: 1.2rem;
+}
+
+
+
+/*jQuery, autocomplete-listor*/
+.ui-widget {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 1rem !important;
+}
+
+
+
+
+#BtnClearInvoiceRecipient {
+    position: absolute;
+    top: 6rem;
+    margin: .5rem !important;
+    line-height: 1;
+    padding: 0.4rem;
+}
+
+
+
+h2 {
+    font-size : 1.17rem;
+}
+
+/*Kunder och adresser*/
+/************************/
+#DivDatabase h2 {
+    display: inline-block;
+}
+
+
+#DivDatabaseButtons {
+    display: flex;
+
+    gap:.5rem;
+    float: right;
+    margin-top: .4rem;
+}
+
+#DivDatabaseContainer {
+    position: relative;
+}
+
+#DivSelectCustomer,
+#DivSelectAddress {
+    display: inline-block;
+}
+
+
+
+#LbxCustomers,
+#LbxPostalAddresses {
+    min-width: 14.1665rem;
+    max-width: 14.1665rem;
+    height: 10rem;
+}
+
+
+#BtnAutofillCustomer,
+#BtnAutofillAddress,
+#BtnAutofillAll {
+    display: block;
+    width: 60%;
+    margin: .25rem auto;
+}
+
+
+
+#DivPastInvoices, #DivShowServices {
+    border: 1px solid black;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    height: 100%;
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    top: 0;
+}
+
+
+
+
+#GrvInvoices {
+    width: 100%
+}
+
+
+    #GrvInvoices > tbody > tr:nth-child(1) > th > a {
+        font-family: helvetica;
+        font-size: 0.77rem;
+    }
+
+
+
+
+
+    #GrvInvoices tbody tr td {
+        text-align: center;
+    }
+
+
+.view-invoice-article-block {
+    margin-bottom: 1.25rem;
+}
+
+
+#BtnUpdateInvoice,
+#BtnDeleteInvoice {
+    margin: .7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Artiklar*/
+/******************/
+
+
+#DivArticleList h2 {
+    text-align: center;
+}
+
+#TblArticleList {
+    margin-top: .25rem;
+}
+
+#TblArticleList tr {
+    position: relative;
+    left: -3px;
+    right: -3px;
+}
+
+
+th {
+    font-family: sans-serif;
+    font-size: 0.95rem;
+}
+
+
+
+
+
+#DivArticleList input[type=number] {
+    width: 3.5rem;
+}
+
+
+/*Byt textfärg på rut-bockrutor när det är företagskund för att understryka att de är otillgängliga*/
+.is-not-enabled-font-color {
+    color: rgb(220, 220, 220);
+}
+
+
+
+
+/* Gör att pilknapparna på "Antal" alltid syns */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+
+.tbx-article-total {
+    max-width: 4rem;
+    text-align: center;
+
+}
+
+
+
+.invoice-summary {
+    /*Create the Layout Grid */
+    display: grid;
+    /*The grid-template-columns property specifies the number (and the widths) of columns in a grid layout.
+    The values are a space separated list, where each value specifies the size of the respective column.
+    Column 1 (Labels) takes up only as much room as its text needs.
+    Column 2 (Inputs) takes up all the remaining space. */
+    grid-template-columns: max-content 1fr;
+    /* Första siffran vertikalt, andra siffran horisontellt */
+    gap: .5rem .75rem;
+    /* Vertically aligns labels perfectly with the center of the textboxes */
+    align-items: center;
+    /* Make the fieldset look exactly like a normal, borderless div */
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0; /* Fixes an old browser bug where fieldsets ignore container widths */
+    max-width: 15.625rem; /* Optional sizing constraint so the textboxes don't stretch forever */
+}
+
+
+
+
+    /* Ensure inputs have a consistent look and span their whole grid track */
+    .invoice-summary input[type="text"] {
+        padding: 0.19rem 0.375rem;
+        box-sizing: border-box; /* Keeps padding from breaking the grid size */
+        max-width: 9rem;
+    }
+
+
+
+#BtnAddArticle {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+
+
+/* Makes the "Total To Pay" label bold to give it extra visual weight */
+#LblGrandInvoiceTotal {
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Felmeddelande och knapp*/
+/******************/
+#LblError {
+    white-space: pre-line;
+    display: block;
+    color: indianred;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#BtnCreateInvoice {
+    display: block;
+    width: 10%;
+    margin: 1.5rem auto;
+    min-width: fit-content;
+}
